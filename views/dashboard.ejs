@@ -1,0 +1,93 @@
+<%- include('header') -%>
+
+<style>
+    body {
+        background-color: #282c35; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        color: #61dafb; 
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .card {
+        margin-top: 50px;
+        background-color: #3e424b;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        transition: transform 0.1s ease-in-out; 
+    }
+
+    .card:hover {
+        transform: scale(1.05); 
+    }
+
+    .card-body {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        color: #61dafb; 
+        margin-bottom: 20px;
+        transition: color 0.3s ease-in-out; 
+    }
+
+    .card:hover .card-title {
+        color: #2185d0; 
+    }
+
+    .card-text {
+        color: #a4acc4; 
+        line-height: 1.6;
+    }
+
+    .btn-logout {
+        margin-top: 20px;
+        background: #000000; 
+        border: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; 
+        margin-left: 270px;
+    }
+
+    .btn-logout:hover {
+        background: #2185d0; 
+        transform: scale(1.05); 
+    }
+</style>
+
+<div class="container">
+    <h1>Hey Akhildas</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Your Support is my Motivation</h2>
+            <p class="card-text">
+                We're excited to have you here. Explore the features and make the most of your dashboard experience.
+            </p>
+        </div>
+    </div>
+
+    <!-- Logout Buttons -->
+    <a href="/logout" class="btn btn-logout">Logout</a>
+    
+</div>
+
+<%- include('footer') -%>

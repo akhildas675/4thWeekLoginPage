@@ -1,0 +1,181 @@
+<%- include('header') -%>
+
+<section>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login Form</title>
+      <style>
+        body {
+          font-family: "Arial", sans-serif;
+          background: url('your-background-image.jpg') center/cover fixed no-repeat;
+          color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          overflow: hidden; /* Hide overflow for particle animation */
+        }
+
+        .particles {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        .login-container {
+          background: rgba(255, 255, 255, 0.8); /* Adjust opacity for better visibility */
+          border-radius: 10px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          padding: 40px;
+          width: 400px;
+          text-align: center;
+          transform: scale(1);
+          transition: transform 0.3s, box-shadow 0.3s;
+          position: relative;
+          z-index: 1;
+          overflow: hidden; /* Hide overflow for particle animation */
+        }
+
+        .login-container:hover {
+          transform: scale(1.05);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container h2 {
+          margin-bottom: 20px;
+          color: #3498db; /* Blue color */
+          animation: fadeInUp 0.8s ease-in-out;
+        }
+        .login-container p{
+          color:red
+        }
+
+        .login-container input {
+          width: calc(100% - 24px);
+          padding: 12px;
+          margin-bottom: 20px;
+          border: 2px solid #3498db; /* Blue color */
+          border-radius: 5px;
+          background: #f9f9f9;
+          transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+          animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .login-container input:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          border-color: #2980b9; /* Darker blue color on hover */
+        }
+
+        .login-container button {
+          width: calc(100% - 24px);
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          background: linear-gradient(to right, #e74c3c, #c0392b);
+          color: #fff;
+          cursor: pointer;
+          transition: background 0.3s, transform 0.3s;
+          animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .login-container button:hover {
+          background: linear-gradient(to right, #c0392b, #e74c3c);
+          transform: scale(1.1);
+        }
+
+        .signup-link {
+          margin-top: 20px;
+          color: #34adcb; /* Light grey color */
+          text-decoration: underline;
+          cursor: pointer;
+          transition: color 0.3s;
+          animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .signup-link:hover {
+          color: #bdc3c7; /* Darker grey color on hover */
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Particle Animation Background -->
+      <div class="particles"></div>
+
+      <!-- Login Container -->
+      <div class="login-container">
+        <!-- <% if(typeof message !== "undefined") { %> -->
+        <p><%= locals.message?message:"invalid username or passwords" %></p>
+        <!-- <% } %> -->
+
+        <h2>login</h2>
+        <form action="/login" method="post">
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            
+            required
+          />
+          <input
+            type="password"
+            placeholder="Your Password"
+            name="password"
+
+            required
+          />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <!-- Particle Script -->
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script>
+        // Particle Animation Script
+        particlesJS("particles", {
+          particles: {
+            number: {
+              value: 50,
+            },
+            color: {
+              value: "#3498db",
+            },
+            shape: {
+              type: "circle",
+            },
+          },
+        });
+      </script>
+    </body>
+  </html>
+
+  <%- include('footer') -%>
+</section>
+

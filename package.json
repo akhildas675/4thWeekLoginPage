@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "json": "^11.0.0",
+    "nocache": "^4.0.0",
+    "nodemon": "^3.0.2",
+    "require": "^0.4.4",
+    "session": "^0.1.0",
+    "upper-case": "^3.0.0",
+    "uppercase": "^1.4.12",
+    "uui": "^1.0.7"
+  },
+  "name": "week4",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
